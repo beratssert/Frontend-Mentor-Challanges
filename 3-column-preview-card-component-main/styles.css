@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	--sedan-color: hsl(31, 77%, 52%);
+	--suv-color: hsl(184, 100%, 22%);
+	--luxury-color: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+h2,
+p,
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	line-height: 1;
+	font-size: 1rem;
+	font-family: 'Lexend Deca', sans-serif;
+	color: white;
+	background-color: white;
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	max-width: 960px;
+	padding: 15px 25px;
+	width: 100%;
+}
+
+.panel-item {
+	padding: 25px 50px;
+}
+
+.sedan {
+	background-color: var(--sedan-color);
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
+
+.suv {
+	background-color: var(--suv-color);
+}
+
+.luxury {
+	background-color: var(--luxury-color);
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+
+img {
+	max-width: 30%;
+	margin-bottom: 25px;
+}
+
+.text-header {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+
+.text {
+	line-height: 1.5;
+	min-height: 35%;
+	margin: 50px 0 25px;
+}
+
+.more-btn {
+	background-color: white;
+	padding: 1em 2em;
+	border-radius: 2em;
+	font-size: 1rem;
+	border: none;
+	margin: 25px 0;
+	transition: background-color ease-in 200ms;
+	display: inline-block;
+}
+
+.sedan .more-btn {
+	color: var(--sedan-color);
+}
+
+.suv .more-btn {
+	color: var(--suv-color);
+}
+
+.luxury .more-btn {
+	color: var(--luxury-color);
+}
+
+.sedan .more-btn:hover {
+	background-color: var(--sedan-color);
+	color: white;
+	border: 1px solid white;
+}
+
+.suv .more-btn:hover {
+	background-color: var(--suv-color);
+	color: white;
+	border: 1px solid white;
+}
+
+.luxury .more-btn:hover {
+	background-color: var(--luxury-color);
+	color: white;
+	border: 1px solid white;
+}
+
+@media (min-width: 900px) {
+	.panel {
+		flex-direction: row;
+	}
+
+	.panel-item {
+		padding: 25px 50px;
+	}
+
+	.sedan {
+		border-top-left-radius: 0.5em;
+		border-bottom-left-radius: 0.5em;
+		border-top-right-radius: 0;
+	}
+
+	.luxury {
+		border-top-right-radius: 0.5em;
+		border-bottom-left-radius: 0;
+	}
+}
