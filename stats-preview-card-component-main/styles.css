@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--main-bg: hsl(233, 47%, 7%);
+	--card-bg: hsl(244, 38%, 16%);
+	--accent: hsl(277, 64%, 61%);
+	--main-heading-and-stats: hsl(0, 0%, 100%);
+	--main-p: hsla(0, 0%, 100%, 0.75);
+	--stat-headings: hsla(0, 0%, 100%, 0.6);
+	--margin: 1rem;
+	--radius: 10px;
+}
+
+html,
+body,
+div,
+span,
+h1,
+p,
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+	font-family: 'Inter', sans-serif;
+	background-color: var(--main-bg);
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.desktop-img {
+	display: none;
+}
+
+.mobile-img {
+	width: 100%;
+	border-top-left-radius: var(--radius);
+	border-top-right-radius: var(--radius);
+}
+
+.card {
+	background-color: var(--card-bg);
+	width: 85%;
+	color: var(--main-heading-and-stats);
+	margin: calc(var(--margin) * 2) 0;
+}
+
+.card-heading {
+	font-size: 1.6rem;
+	margin: var(--margin);
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.card-highlight {
+	color: var(--accent);
+}
+
+.card-text {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 0.98em;
+	color: var(--main-p);
+	margin: var(--margin);
+	line-height: 1.5;
+}
+
+.card-stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--stat-headings);
+}
+
+.stat {
+	margin: var(--margin);
+}
+
+.stat-heading {
+	color: var(--main-heading-and-stats);
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+
+.stat-text {
+	margin-top: calc(var(--margin) / 2);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+}
+
+@media (min-width: 950px) {
+	.mobile-img {
+		display: none;
+	}
+
+	.desktop-img {
+		display: inline;
+		border-top-right-radius: var(--radius);
+		border-bottom-right-radius: var(--radius);
+		width: 100%;
+		min-height: 100%;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: row-reverse;
+		border-radius: var(--radius);
+		text-align: left;
+		width: 80%;
+	}
+
+	.card-content {
+		margin: calc(var(--margin) * 2.5);
+		width: 50%;
+	}
+
+	.card-img {
+		width: 50%;
+	}
+
+	.card-stats {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 var(--margin);
+		margin-top: calc(var(--margin) * 2.5);
+	}
+}
+
+@media (min-width: 1244px) {
+	.card {
+		width: 60%;
+	}
+}
